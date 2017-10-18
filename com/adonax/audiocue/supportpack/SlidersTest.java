@@ -46,7 +46,7 @@ import javax.sound.sampled.DataLine;
 import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.UnsupportedAudioFileException;
 
-import com.adonax.audiocue01.AudioCue;
+import com.adonax.audiocue.AudioCue;
 
 import javafx.application.Application;
 import javafx.geometry.Insets;

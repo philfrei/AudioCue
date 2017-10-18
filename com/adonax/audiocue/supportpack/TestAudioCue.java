@@ -46,9 +46,9 @@ import javax.sound.sampled.DataLine;
 import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.UnsupportedAudioFileException;
 
-import com.adonax.audiocue01.AudioCue;
-import com.adonax.audiocue01.AudioCueInstanceEvent;
-import com.adonax.audiocue01.AudioCueListener;
+import com.adonax.audiocue.AudioCue;
+import com.adonax.audiocue.AudioCueInstanceEvent;
+import com.adonax.audiocue.AudioCueListener;
 
 /**
  * {@code TestAudioCue} is part of <em>AudioCueSupportPack</em>,
