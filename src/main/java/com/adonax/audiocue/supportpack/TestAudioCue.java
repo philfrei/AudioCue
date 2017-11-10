@@ -76,12 +76,10 @@ import src.main.java.com.adonax.audiocue.AudioCueListener;
  * These assets should be placed in a sub-folder directly 
  * below this folder, with the sub-folder named "res".
  * Copies of the assets will be maintained at the following 
- * urls:
- * <ul><li> http://adonax.com/AudioCue/a.wav</li>
- * <li> http://adonax.com/AudioCue/frog.wav</li>
- * <li> http://adonax.com/AudioCue/gunshot.wav</li>
- * <li> http://adonax.com/AudioCue/shortshot.wav</li></ul>
+ * url:
+ * <ul><li>https://github.com/philfrei/AudioCue/tree/master/src/main/java/com/adonax/audiocue/supportpack/res</li></ul>
  * 
+ *  
  * @author Philip Freihofner
  * @version AudioCueSupportPack 1.1
  * @see http://adonax.com/AudioCue/index.html#supportpack

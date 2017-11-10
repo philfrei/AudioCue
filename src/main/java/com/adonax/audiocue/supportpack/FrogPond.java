@@ -71,7 +71,7 @@ import src.main.java.com.adonax.audiocue.AudioCueListener;
  * below this folder, with the sub-folder named "res".
  * A copy of the asset will be maintained at the following 
  * url:
- * <ul><li>http://adonax.com/AudioCue/frog.wav</li></ul>
+ * <ul><li>https://github.com/philfrei/AudioCue/tree/master/src/main/java/com/adonax/audiocue/supportpack/res</li></ul>
  * 
  * 
  * @author Philip Freihofner

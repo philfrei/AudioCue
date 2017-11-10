@@ -79,9 +79,9 @@ import src.main.java.com.adonax.audiocue.AudioCueListener;
  * named "res".
  * <p>
  * Copies of the assets will be maintained at the following 
- * urls:
- * <ul><li>http://adonax.com/AudioCue/gunshot.wav</li>
- * <li>http://adonax.com/AudioCue/shortshot.wav</li></ul>
+ * url:
+ * <ul><li>https://github.com/philfrei/AudioCue/tree/master/src/main/java/com/adonax/audiocue/supportpack/res</li>
+ * </ul>
  * 
  * 
  * @author Philip Freihofner

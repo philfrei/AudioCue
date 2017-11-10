@@ -60,7 +60,7 @@ import javax.sound.sampled.SourceDataLine;
  * 
  * @author Philip Freihofner
  * @version AudioCue 1.1
- * @see http://adonax.com/AudioMixerTrack, http://adonax.com/AudioCue
+ * @see http://adonax.com/AudioCue
  */
 public class AudioMixer 
 {

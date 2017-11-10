@@ -79,8 +79,8 @@ import javafx.stage.Stage;
  * below the folder containing this file, with the sub-folder 
  * named "res". A copy of the asset will be maintained at the 
  * following url:
- * <ul><li>http://adonax.com/AudioCue/a.wav</li></ul>
- * 
+ * <ul><li>https://github.com/philfrei/AudioCue/tree/master/src/main/java/com/adonax/audiocue/supportpack/res</li></ul>
+ *  
  * 
  * @author Philip Freihofner
  * @version AudioCueSupportPack 1.00
