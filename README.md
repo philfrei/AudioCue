@@ -61,18 +61,17 @@ In addition, there are two optional file folders with demo content and resources
 * [supportpack](https://github.com/philfrei/AudioCue/tree/master/com/adonax/audiocue/supportpack)
 * [supportpack.res](https://github.com/philfrei/AudioCue/tree/master/com/adonax/audiocue/supportpack/res)
 
-Installation involves copying and pasting the five files into your 
-program.
+Manual installation involves copying and pasting the five files into 
+your project.
 
 * Method 1) navigate to, then copy and paste the five files
 directly into your program.
-* Method 2) download and unzip [audiocue.zip](http://adonax.com/AudioCue/audiocue.zip), which holds
-these five files, into your project.
-* Method 3) download [audiocue.jar](http://adonax.com/AudioCue/audiocue.jar), 
+* Method 2) download [audiocue.jar](http://adonax.com/AudioCue/audiocue.jar), 
 which includes source code, the "supportpack" and "res" content, 
 and import into your IDE.
 _[NOTE: I'm not clear if the .jar file, which I generated from Eclipse, 
-can be imported into other IDEs.]_
+can be imported into other IDEs. If run, the .jar file executes 
+a program that demonstrates the real time slider capabilities.]_
 
 ## Usage
 
