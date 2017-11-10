@@ -8,13 +8,9 @@ buildscript {
     }
 }
 
-dependencies {
-
-    
-}
-
 repositories {
     mavenCentral()
+    jcenter()
 }
 
 task packageSources(type: Jar, dependsOn: 'classes') {
