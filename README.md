@@ -18,7 +18,7 @@ limited by only allowing changes at buffer increments.
 * ### Easy to Use
   * Very light: Download or copy/paste five class files from GitHub directly into your project.
   * Syntax is simpler than Java's _Clip_ class.
-  * API and demonstration programs provided.
+  * [API](http://adonax.com/AudioCue/api) and demonstration programs provided.
 * ### Powerful
   * Runs directly on Java's _SourceDataLine_.
   * Allows concurrent playback of cues.
