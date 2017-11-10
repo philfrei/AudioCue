@@ -69,9 +69,9 @@ directly into your program.
 * Method 2) download [audiocue.jar](http://adonax.com/AudioCue/audiocue.jar), 
 which includes source code, the "supportpack" and "res" content, 
 and import into your IDE.
-_[NOTE: I'm not clear if the .jar file, which I generated from Eclipse, 
-can be imported into other IDEs. If run, the .jar file executes 
-a program that demonstrates the real time slider capabilities.]_
+_[NOTE: I'm not clear if the .jar file, which I generated from Eclipse
+on 11/10/2017, can be imported into other IDEs. If run, the .jar 
+file executes a program that demonstrates the real time capabilities.]_
 
 ## Usage
 
