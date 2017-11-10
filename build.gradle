@@ -1,0 +1,25 @@
+apply plugin: 'java'
+
+buildscript {
+
+    repositories {
+        jcenter()
+        mavenCentral()
+    }
+}
+
+dependencies {
+
+    
+}
+
+repositories {
+    mavenCentral()
+}
+
+task packageSources(type: Jar, dependsOn: 'classes') {
+    from sourceSets.main.allSource
+    classifier = 'sources'
+}
+
+artifacts { archives packageSources }
