@@ -34,7 +34,7 @@
  * OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, 
  * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-package com.adonax.audiocue;
+package src.main.java.com.adonax.audiocue;
 
 import java.io.IOException;
 import java.net.URL;
@@ -48,7 +48,7 @@ import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.DataLine;
 import javax.sound.sampled.Line.Info;
 
-import com.adonax.audiocue.AudioCueInstanceEvent.Type;
+import src.main.java.com.adonax.audiocue.AudioCueInstanceEvent.Type;
 
 import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.Mixer;

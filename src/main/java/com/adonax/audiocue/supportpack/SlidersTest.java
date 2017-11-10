@@ -34,7 +34,7 @@
  * OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, 
  * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-package com.adonax.audiocue.supportpack;
+package src.main.java.com.adonax.audiocue.supportpack;
 
 import java.io.IOException;
 import java.net.URL;
@@ -46,7 +46,7 @@ import javax.sound.sampled.DataLine;
 import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.UnsupportedAudioFileException;
 
-import com.adonax.audiocue.AudioCue;
+import src.main.java.com.adonax.audiocue.AudioCue;
 
 import javafx.application.Application;
 import javafx.geometry.Insets;
