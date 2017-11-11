@@ -5,11 +5,11 @@ designed for use with game programming.
 
 ## Why?
 
-Java's **Clip** class (_javax.audio.sampled.Clip_) was not designed 
+Java's **Clip** class (`javax.audio.sampled.Clip`) was not designed 
 with the special needs of game audio in mind. The class has a tricky, 
-non-intuitive syntax and a limited feature set. A _Clip_ cannot
+non-intuitive syntax and a limited feature set. A `Clip` cannot
 be played concurrently with itself, can only be played at its 
-recorded pitch, and the _Control_ class provided for real time
+recorded pitch, and the `Control` class provided for real time
 changes such as panning and volume is system-dependent and 
 limited by only allowing changes at buffer increments. 
 
@@ -17,10 +17,10 @@ limited by only allowing changes at buffer increments.
 
 * ### Easy to Use
   * Very light: Download or copy/paste five class files from GitHub directly into your project.
-  * Syntax is simpler than Java's _Clip_ class.
+  * Syntax is simpler than Java's `Clip` class.
   * [API](http://adonax.com/AudioCue/api) and demonstration programs provided.
 * ### Powerful
-  * Runs directly on Java's _SourceDataLine_.
+  * Runs directly on Java's `SourceDataLine`.
   * Allows concurrent playback of cues.
   * Allows  playback at varying speeds.
   * Supports real-time volume, panning and frequency changes.
@@ -28,6 +28,16 @@ limited by only allowing changes at buffer increments.
   * Includes messaging system for coordination with graphics.
 * ### BSD License (open source, free, donations greatly appreciated)
 * ### Now includes *AudioMixer* for consolidating AudioCues into a single output line.
+
+**Important:** |
+----------------
+*_AudioCue_ may not be the right choice for your project due to the following limitations.
+* Only one output format is currently supported: 16-bit, 44100fps, stereo, little-endian (aka *CD Quality*) |
+* Compressed audio formats are not currently supported. As a work-around, if you are able to use another library
+to decompress your audio to a PCM data encoded as normalized stereo floats (data range -1 to 1, left, then right), 
+_AudioCue_ will accept that array as input. |
+* This is not a 3D audio system. Major elements of such a system, like delay-based panning, distance attenuation,
+Doppler effects are not implemented. |
 
 ### How to get it:
 
@@ -95,7 +105,7 @@ file executes a program that demonstrates the real time capabilities.]_
 An important feature of *AudioCode* is the the ability to drill down 
 to individual playing instances of a cue and alter properties in real
 time. To drill down to a specific instance, we can one of two methods
-to capture an *int* handle that will identify the instance. The first 
+to capture an `int` handle that will identify the instance. The first 
 is to capture the return value of the play method, as follows:
 
     int handle = myAudioCue.play(); 
@@ -114,13 +124,13 @@ instances).
     myAudioCue.release(handle); // to return the instance to available pool
 
 An important distinction between an instance handle 
-gotten from a _play()_ method and the _obtainInstance()_ method is 
-that the default value of a boolean field _recycleWhenDone_ differs.
-An instance arising from _play()_ has this value set to _true_, and an 
-instance arising from _obtainInstance()_ has this value set to _false_.
-When an instance finishes playing, if the boolean _recycleWhenDone_ is 
-_true_, the instance is automatically returned to the pool of available 
-instances and no longer available for updating. If the value is _false_,
+gotten from a `play()` method and the `obtainInstance()` method is 
+that the default value of a boolean field `recycleWhenDone` differs.
+An instance arising from `play()` has this value set to `true`, and an 
+instance arising from `obtainInstance()` has this value set to `false`.
+When an instance finishes playing, if the boolean `recycleWhenDone` is 
+`true`, the instance is automatically returned to the pool of available 
+instances and no longer available for updating. If the value is `false`,
 properties of the instance can continue to be updated, and the 
 instance can be repositioned and restarted.
 
@@ -144,9 +154,9 @@ Properties that can be altered for an instance include the following:
 
 ### Usage: output configuration
 
-Output configuration occurs with the *AudioCue*'s _open()_ method. The 
+Output configuration occurs with the *AudioCue*'s `open()` method. The 
 default configuration will use Java *AudioSystem*'s 
-(*javax.sound.sampled.AudioSystem*) default _Mixer_ and _SourceDataLine_, 
+(*javax.sound.sampled.AudioSystem*) default `Mixer` and `SourceDataLine`, 
 a 1024 frame buffer, and the highest available thread priority. 
 (A high thread priority should not affect performance of the rest of 
 an application, as the audio thread should spend the vast majority 
@@ -156,18 +166,18 @@ longer cue, used to play many concurrent instances might require a
 larger buffer in order to minimize dropouts. 
 
 You can override the output line defaults via using an alternate form
-of the _open()_ method. For example:
+of the `open()` method. For example:
 
     myAudioCue.open(mixer, bufferFrames, threadPriority); // where mixer is javax.sound.sampled.Mixer
      
 Each _AudioCue_ can have its own optimized configuration, and will 
-be output on its own _SoureDataOutput_ line, much like each Java 
-_Clip_ consumes an output line.  
+be output on its own `SoureDataOutput` line, much like each Java 
+`Clip` consumes an output line.  
 
 ### Usage: Outputting via _AudioMixer_
 Alternatively, the output of an _AudioCue_ can be directed to an 
 _AudioMixer_, which is part of this package. All inputs to an 
-_AudioMixer_ are merged and sent out on a single _SourceDataLine_. 
+_AudioMixer_ are merged and sent out on a single `SourceDataLine`. 
 This can be especially helpful for systems that have a limited 
 number of output lines.
 
@@ -205,10 +215,16 @@ an _AudioCue_ track, play the cue, then shut it all down.
 ### Usage: Additional examples and test files
 Additional examples and test files can be found in the _supportpack_
 package. The *SlidersTest* demonstrates real time controls, via
-GUI sliders. The *BattleField* and *FrogPond* show some techniques
-for building rich soundscapes from a minimum of cues, by taking
+GUI sliders. The *BattleField* and *FrogPond* show techniques
+for building rich soundscapes from a minimum of resources, by taking
 advantage of the volume, pitch, and pan parameters to make a single
 cue provide the illusion of many individual entities.
+
+These demo programs can be downloaded and run via the following jar files:
+* [SlidersTest.jar](http://adonax.com/AudioCue/sliderstest.jar) showing real-time controls, alongside a Clip for comparison 
+* [FrogPond.jar](http://adonax.com/AudioCue/frogpond.jar) built from a single frog.wav file
+* [Battlefield.jar](http://adonax.com/AudioCue/battlefield.jar) built from two gunshot sfx files
+
 
 ## Contact Info
 
