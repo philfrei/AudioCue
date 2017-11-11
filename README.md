@@ -29,10 +29,12 @@ limited by only allowing changes at buffer increments.
 * ### BSD License (open source, free, donations greatly appreciated)
 * ### Now includes *AudioMixer* for consolidating AudioCues into a single output line.
 
-
-
+<br />
+----
 *NOTE: AudioCue may not be the best choice for your project if one of the following apply:*
+----
 * *Only one output format is currently supported: 16-bit, 44100fps, stereo, little-endian (aka CD Quality).*
+
 * *Compressed audio formats are not currently supported. As a work-around, if you are able to use another library to decompress your audio to PCM data as normalized stereo floats (data range -1 to 1, left then right), AudioCue will accept that array as input.*
 * *This is not a 3D audio system. Major elements like delay-based panning, distance attenuation, Doppler effects, are not implemented.*
 
