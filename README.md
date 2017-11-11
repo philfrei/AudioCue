@@ -29,14 +29,14 @@ limited by only allowing changes at buffer increments.
 * ### BSD License (open source, free, donations greatly appreciated)
 * ### Now includes *AudioMixer* for consolidating AudioCues into a single output line.
 
-**Important:** |
-----------------
-*_AudioCue_ may not be the right choice for your project due to the following limitations.
-* Only one output format is currently supported: 16-bit, 44100fps, stereo, little-endian (aka *CD Quality*) |
-* Compressed audio formats are not currently supported. As a work-around, if you are able to use another library
+| **Important:** |
+|----------------|
+|_AudioCue_ may not be the right choice for your project due to the following limitations.
+| Only one output format is currently supported: 16-bit, 44100fps, stereo, little-endian (aka *CD Quality*) |
+| Compressed audio formats are not currently supported. As a work-around, if you are able to use another library
 to decompress your audio to a PCM data encoded as normalized stereo floats (data range -1 to 1, left, then right), 
 _AudioCue_ will accept that array as input. |
-* This is not a 3D audio system. Major elements of such a system, like delay-based panning, distance attenuation,
+| This is not a 3D audio system. Major elements of such a system, like delay-based panning, distance attenuation,
 Doppler effects are not implemented. |
 
 ### How to get it:
@@ -223,7 +223,7 @@ cue provide the illusion of many individual entities.
 These demo programs can be downloaded and run via the following jar files:
 * [SlidersTest.jar](http://adonax.com/AudioCue/sliderstest.jar) showing real-time controls, alongside a Clip for comparison 
 * [FrogPond.jar](http://adonax.com/AudioCue/frogpond.jar) built from a single frog.wav file
-* [Battlefield.jar](http://adonax.com/AudioCue/battlefield.jar) built from two gunshot sfx files
+* [Battlefield.jar](http://adonax.com/AudioCue/battlefield.jar) built from two gunshot wavs
 
 
 ## Contact Info
