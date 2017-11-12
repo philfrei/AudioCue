@@ -31,9 +31,8 @@ limited by only allowing changes at buffer increments.
 
 <br />
 
-_NOTE: AudioCue may not be the best choice for your project if one of the following apply:_
-* *Only one output format is currently supported: 16-bit, 44100fps, stereo, little-endian (aka CD Quality).*
-
+_NOTE: AudioCue may not be the best choice for your project if one of the following limitations apply:_
+* *AudioCue only supports one output format: 16-bit, 44100fps, stereo, little-endian (aka CD Quality).*
 * *Compressed audio formats are not currently supported. As a work-around, if you are able to use another library to decompress your audio to PCM data as normalized stereo floats (data range -1 to 1, left then right), AudioCue will accept that array as input.*
 * *This is not a 3D audio system. Major elements like delay-based panning, distance attenuation, Doppler effects, are not implemented.*
 
@@ -142,8 +141,8 @@ Properties that can be altered for an instance include the following:
                                       // to 1 (full right)
     //*speed of playback*: 
     myAudioCue.setSpeed(handle, value); // value is a factor, 
-                // multiplied against the normal playback rate, e.g.,
-                // 2 will double playback speed, 0.5 will halve it 
+                      // multiplied against the normal playback rate, e.g.,
+                      // 2 will double playback speed, 0.5 will halve it 
     //*position*:
     myAudioCue.setFramePosition(handle, frameNumber);
     myAudioCue.setMillisecondPosition(handle, int); // position in millis
@@ -169,8 +168,8 @@ of the `open()` method. For example:
     myAudioCue.open(mixer, bufferFrames, threadPriority); // where mixer is javax.sound.sampled.Mixer
      
 Each _AudioCue_ can have its own optimized configuration, and will 
-be output on its own `SoureDataOutput` line, much like each Java 
-`Clip` consumes an output line.  
+be output on its own `SoureDataOutput` line, similar to the way that each 
+Java `Clip` consumes an output line.  
 
 ### Usage: Outputting via _AudioMixer_
 Alternatively, the output of an _AudioCue_ can be directed to an 
@@ -181,8 +180,8 @@ number of output lines.
 
     myAudioCue.open(myAudioMixer); 
 
-The _AudioMixer_ can also be configured for buffer size (the default 
-is 8192 frames), javax.sound.sampled.Mixer, and thread priority. 
+The _AudioMixer_ can also be configured for javax.sound.sampled.Mixer, 
+buffer size (the default is 8192 frames), and thread priority. 
 Any _AudioCue_ routed through an _AudioMixer_ will automatically be 
 use the *AudioMixer*'s configuration properties. *AudioCue*s 
 can be added or removed from the _AudioMixer_ while the _AudioMixer_
@@ -194,7 +193,7 @@ an _AudioCue_ track, play the cue, then shut it all down.
 
     AudioMixer audioMixer = new AudioMixer();
     audioMixer.start();
-    // At this point, AudioMixer will create a runnable and will
+    // At this point, AudioMixer will create and start a runnable and will
     // actively output 'silence' (zero values) on its SourceDataLine. 
     
     URL url = this.getClass().getResource("myAudio.wav");
@@ -231,12 +230,11 @@ appreciated!
 
 [![](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=TER23UW9HW2P8)
 
-I'm happy to list links to games or game-makers that are using 
-*AudioCue*!
+I'm happy to list links to games or game-makers using *AudioCue*.
 
 ## Contact Info
 
-Author/Programmer/Composer: Phil Freihofner
+Programmer/Sound-Designer/Composer: Phil Freihofner
 
 URL: http://adonax.com
 
