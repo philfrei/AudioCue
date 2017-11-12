@@ -224,6 +224,21 @@ These demo programs can be downloaded and run via the following jar files:
 * [Battlefield.jar](http://adonax.com/AudioCue/battlefield.jar) built from two gunshot wavs
 
 
+## DONATE
+It would be great to hear (by email or by donation) if *AudioCue* has
+been helpful. Positive feedback is very motivating, and much
+appreciated!
+
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="TER23UW9HW2P8">
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+
+I'm happy to list links to games or game-makers that are using 
+*AudioCue*!
+
 ## Contact Info
 
 Author/Programmer/Composer: Phil Freihofner
@@ -233,3 +248,6 @@ URL: http://adonax.com
 Email: phil@adonax.com
 
 Recommended forum: http://www.java-gaming.org/boards/java-sound-openal/16/view.html
+
+If using StackOverflow for a question about this code, chances are highest
+that I will eventually see it if you include the keyword "javasound".
