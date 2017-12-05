@@ -58,11 +58,11 @@ _NOTE: AudioCue may not be the best choice for your project if one of the follow
 ## Manual Installation
 
 AudioCue requires five files:
-* [AudioCue.java](https://github.com/philfrei/AudioCue/blob/master/com/adonax/audiocue/AudioCue.java)
-* [AudioCueInstanceEvent.java](https://github.com/philfrei/AudioCue/blob/master/com/adonax/audiocue/AudioCueInstanceEvent.java)
-* [AudioCueListener.java](https://github.com/philfrei/AudioCue/blob/master/com/adonax/audiocue/AudioCueListener.java)
-* [AudioMixer.java](https://github.com/philfrei/AudioCue/blob/master/com/adonax/audiocue/AudioMixer.java)
-* [AudioMixerTrack.java](https://github.com/philfrei/AudioCue/blob/master/com/adonax/audiocue/AudioMixerTrack.java)
+* [AudioCue.java](https://github.com/philfrei/AudioCue/blob/master/src/main/java/com/adonax/audiocue/AudioCue.java)
+* [AudioCueInstanceEvent.java](https://github.com/philfrei/AudioCue/blob/master/src/main/java/com/adonax/audiocue/AudioCueInstanceEvent.java)
+* [AudioCueListener.java](https://github.com/philfrei/AudioCue/blob/master/src/main/java/com/adonax/audiocue/AudioCueListener.java
+* [AudioMixer.java](https://github.com/philfrei/AudioCue/blob/master/src/main/java/com/adonax/audiocue/AudioMixer.java)
+* [AudioMixerTrack.java](https://github.com/philfrei/AudioCue/blob/master/src/main/java/com/adonax/audiocue/AudioMixerTrack.java)
 
 In addition, there are two optional file folders with demo content and resources used by the demo programs:
 * [supportpack](https://github.com/philfrei/AudioCue/tree/master/com/adonax/audiocue/supportpack)
