@@ -36,6 +36,11 @@ _NOTE: AudioCue may not be the best choice for your project if one of the follow
 * *Compressed audio formats are not currently supported. As a work-around, if you are able to use another library to decompress your audio to PCM data as normalized stereo floats (data range -1 to 1, left then right), AudioCue will accept that array as input.*
 * *This is not a 3D audio system. Major elements like delay-based panning, distance attenuation, Doppler effects, are not implemented.*
 
+### Demo Jars (including source code):
+[SlidersDemo](http://adonax.com/AudioCue/slidersdemo.jar) allows you three concurrent playbacks of a .wav of a bell. Sliders provided alter pitch, volume and panning in real time. A playback using Java `Clip` is provided for comparison purposes.
+[FrogPondDemo](http://adonax.com/AudioCue/frogponddemo.jar) creates a soundscape of many frogs from a single croak I recorded at nearby El Cerrito Creek.
+[BattleFieldDemo](http://adonax.com/AudioCue/battlefielddemo.jar) creates a soundscape of fighting in a war zone, from a wav of a single gunshot (slight cheat: the machine gun uses an Audacity edit of the same gunshot that trims the decay a bit).   
+
 ### How to get it:
 
 [Gradle (Maven, Sbt, Leiningen)](https://jitpack.io/#philfrei/AudioCue)
@@ -65,8 +70,8 @@ AudioCue requires five files:
 * [AudioMixerTrack.java](https://github.com/philfrei/AudioCue/blob/master/src/main/java/com/adonax/audiocue/AudioMixerTrack.java)
 
 In addition, there are two optional file folders with demo content and resources used by the demo programs:
-* [supportpack](https://github.com/philfrei/AudioCue/tree/master/com/adonax/audiocue/supportpack)
-* [supportpack.res](https://github.com/philfrei/AudioCue/tree/master/com/adonax/audiocue/supportpack/res)
+* [supportpack](https://github.com/philfrei/AudioCue/tree/master/src/main/java/com/adonax/audiocue/supportpack)
+* [supportpack.res](https://github.com/philfrei/AudioCue/tree/master/src/main/java/com/adonax/audiocue/supportpack/res)
 
 Manual installation involves copying and pasting the five files into 
 your project.
@@ -243,4 +248,4 @@ Email: phil@adonax.com
 Recommended forum: http://www.java-gaming.org/boards/java-sound-openal/16/view.html
 
 If using StackOverflow for a question about this code, chances are highest
-that I will eventually see it if you include the keyword "javasound".
+that I will eventually see it if you include the tag "javasound".
