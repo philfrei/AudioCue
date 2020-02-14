@@ -26,7 +26,7 @@ limited by only allowing changes at buffer increments.
   * Supports real-time volume, panning and frequency changes.
   * Highly configurable.
   * Includes messaging system for coordination with graphics.
-* ### BSD License (open source, free, donations greatly appreciated)
+* ### BSD License (open source, free)
 * ### Now includes *AudioMixer* for consolidating AudioCues into a single output line.
 
 <br />
@@ -36,12 +36,35 @@ _NOTE: AudioCue may not be the best choice for your project if one of the follow
 * *Compressed audio formats are not currently supported. As a work-around, if you are able to use another library to decompress your audio to PCM data as normalized stereo floats (data range -1 to 1, left then right), AudioCue will accept that array as input.*
 * *This is not a 3D audio system. Major elements like delay-based panning, distance attenuation, Doppler effects, are not implemented.*
 
+### Comparison of Clip Alternatives
+
+
+|                        |                             Clip                             |                       JavaFX AudioClip                       |                  AudioCue                   |                TinySound "Sound"                |
+| ---------------------- | :----------------------------------------------------------: | :----------------------------------------------------------: | :-----------------------------------------: | :---------------------------------------------: |
+| API Link               | https://docs.oracle.com/javase/10/docs/api/index.html?javax/sound/sampled/Clip.html | https://docs.oracle.com/javase/9/docs/api/javafx/scene/media/AudioClip.html |       http://adonax.com/AudioCue/api/       |  http://finnkuusisto.github.io/TinySound/doc/   |
+| Modules required       |                         java.desktop                         |                         javafx.media                         |                java.desktop                 |                  java.desktop                   |
+| Output format          |                      multiple supported                      |                      multiple supported                      | only 44100 fps, 16-bit stereo little endian |   only 44100 fps, 16-bit stereo little endian   |
+| Looping                |                             Yes                              |                             Yes                              |                     Yes                     |          Yes, with settable loop point          |
+| Pausing, Repositioning |                             Yes                              |                             Yes                              |                     Yes                     |                       Yes                       |
+| Concurrent Playback    |                              No                              |                             Yes                              |                     Yes                     |                       Yes                       |
+| Settable Volume        |                             Yes                              |                             Yes                              |                     Yes                     |                       Yes                       |
+| Dynamic Volume         |        Per buffer, if MASTER_GAIN or VOLUME supported        |                              No                              |               Yes, per frame                |                       No                        |
+| Settable Panning       |                             Yes                              |                             Yes                              |                     Yes                     |                       Yes                       |
+| Dynamic Panning        |                Per buffer, if  PAN supported                 |                              No                              |               Yes, per frame                |                       No                        |
+| Settable Frequency     |                              No                              |                             Yes                              |                     Yes                     |                       No                        |
+| Dynamic Frequency      |            Per buffer, if  SAMPLE_RATE supported             |                              No                              |               Yes, per frame                |                       No                        |
+| Read .mp3              |                Requires additional libraries                 |                             Yes                              |                     No                      |                       No                        |
+| Read .ogg vorbis       |                Requires additional libraries                 |                             Yes                              |                     No                      | Yes, if Jorbis/Tritonus libraries on class path |
+| Read .wav              |                             Yes                              |                             Yes                              |                     Yes                     |                       Yes                       |
+| Notifications          |                         LineListener                         |                              No                              |              AudioCueListener               |                       No                        |
+
 ### Demo Jars (including source code):
+
 [SlidersDemo](http://adonax.com/AudioCue/slidersdemo.jar) allows you three concurrent playbacks of a .wav of a bell. Sliders provided alter pitch, volume and panning in real time. A playback using Java `Clip` is provided for comparison purposes.
 [FrogPondDemo](http://adonax.com/AudioCue/frogponddemo.jar) creates a soundscape of many frogs from a single croak I recorded at nearby El Cerrito Creek.
 [BattleFieldDemo](http://adonax.com/AudioCue/battlefielddemo.jar) creates a soundscape of fighting in a war zone, from a wav of a single gunshot (slight cheat: the machine gun uses an Audacity edit of the same gunshot that trims the decay a bit).   
 
-### How to get it:
+## Installation via Gradle
 
 [Gradle (Maven, Sbt, Leiningen)](https://jitpack.io/#philfrei/AudioCue)
 
@@ -98,7 +121,7 @@ file executes a program that demonstrates the real time capabilities.]_
     
     // For playback, normally done on demand:
     myAudioCue.play();  // see API for parameters to override default vol, pan, pitch 
-
+    
     // release resources when sound is no longer needed
     myAudioCue.close();
 
@@ -171,7 +194,7 @@ You can override the output line defaults via using an alternate form
 of the `open()` method. For example:
 
     myAudioCue.open(mixer, bufferFrames, threadPriority); // where mixer is javax.sound.sampled.Mixer
-     
+
 Each _AudioCue_ can have its own optimized configuration, and will 
 be output on its own `SoureDataOutput` line, similar to the way that each 
 Java `Clip` consumes an output line.  
@@ -213,7 +236,7 @@ an _AudioCue_ track, play the cue, then shut it all down.
     myAudioCue.close(); // will remove AudioCue from the mix                    
     audioMixer.stop();  // AudioMixer will stop outputting and will
                         // close the runnable in an 'orderly' manner.
-                       
+
 ### Usage: Additional examples and test files
 Additional examples and test files can be found in the _supportpack_
 package. The *SlidersTest* demonstrates real time controls, via
