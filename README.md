@@ -11,7 +11,7 @@ non-intuitive syntax and a limited feature set. A `Clip` cannot
 be played concurrently with itself, can only be played at its 
 recorded pitch, and the `Control` class provided for real time
 changes such as panning and volume is system-dependent and 
-limited by only allowing changes at buffer increments. 
+limited to only allowing changes at buffer increments. 
 
 **AudioCue** addresses these issues:
 
@@ -129,7 +129,7 @@ file executes a program that demonstrates the real time capabilities.]_
 
 An important feature of *AudioCode* is the the ability to drill down 
 to individual playing instances of a cue and alter properties in real
-time. To drill down to a specific instance, we can one of two methods
+time. To drill down to a specific instance, we can use one of two methods
 to capture an `int` handle that will identify the instance. The first 
 is to capture the return value of the play method, as follows:
 
@@ -243,7 +243,9 @@ package. The *SlidersTest* demonstrates real time controls, via
 GUI sliders. The *BattleField* and *FrogPond* show techniques
 for building rich soundscapes from a minimum of resources, by taking
 advantage of the volume, pitch, and pan parameters to make a single
-cue provide the illusion of many individual entities.
+cue provide the illusion of many individual entities. The *AudioCueListener*,
+which broadcasts events such as starting, looping or stopping, is also 
+demonstrated.
 
 These demo programs can be downloaded and run via the following jar files:
 * [SlidersTest.jar](http://adonax.com/AudioCue/sliderstest.jar) showing real-time controls, alongside a Clip for comparison 
