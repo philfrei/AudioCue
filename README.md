@@ -196,7 +196,7 @@ of the `open()` method. For example:
     myAudioCue.open(mixer, bufferFrames, threadPriority); // where mixer is javax.sound.sampled.Mixer
 
 Each _AudioCue_ can have its own optimized configuration, and will 
-be output on its own `SoureDataOutput` line, similar to the way that each 
+be output on its own `SourceDataLine` line, similar to the way that each 
 Java `Clip` consumes an output line.  
 
 ### Usage: Outputting via _AudioMixer_
