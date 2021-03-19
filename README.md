@@ -1,6 +1,6 @@
 ﻿# AudioCue
 
-**AudioCue** is a new Java resource for playing back sound files, 
+**AudioCue** is a Java resource for playing sound files, 
 designed for use with game programming. 
 
 ## Why?
@@ -21,6 +21,7 @@ limited to only allowing changes at buffer increments.
   * [API](http://adonax.com/AudioCue/api) and demonstration programs provided.
 * ### Powerful
   * Runs directly on Java's `SourceDataLine`.
+  * Supports playback of PCM (signed, stereo floats) and WAV (16-bit, 44100 fps, stereo, little-endian)
   * Allows concurrent playback of cues.
   * Allows  playback at varying speeds.
   * Supports real-time volume, panning and frequency changes.
@@ -268,9 +269,9 @@ Programmer/Sound-Designer/Composer: Phil Freihofner
 
 URL: http://adonax.com
 
-Email: phil@adonax.com
+Email: phil AT adonax.com
 
-Recommended forum: http://www.java-gaming.org/boards/java-sound-openal/16/view.html
+Recommended forum: https://jvm-gaming.org/c/java-sound-amp-openal/12
 
 If using StackOverflow for a question about this code, chances are highest
 that I will eventually see it if you include the tag "javasound".
