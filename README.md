@@ -109,6 +109,12 @@ _[NOTE: I'm not clear if the .jar file, which I generated from Eclipse
 on 11/10/2017, can be imported into other IDEs. If run, the .jar 
 file executes a program that demonstrates the real time capabilities.]_
 
+## Maven alternative
+
+A Maven-based alternative is now available. The project has been split into 
+two parts. For the core tool, see [AudioCue-maven](https://github.com/philfrei/AudioCue-maven),
+and for the supporting demonstration code, see [audiocue-demo](https://github.com/philfrei/audiocue-demo).
+
 ## Usage
 
     // Simple case example ("fire-and-forget" playback):
