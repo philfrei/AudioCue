@@ -3,6 +3,15 @@
 **AudioCue** is a Java resource for playing sound files, 
 designed for use with game programming. 
 
+__IMPORTANT NOTE: I'm letting go of 
+maintaining this version. A new version [AudioCue-Maven](https://github.com/philfrei/AudioCue-maven) is
+now were active updates are being done, along with a companion project [audiocue-demo](https://github.com/philfrei/audioCue-demo).
+Main differences:__
+1. new project is Maven-based, not Gradle-based, 
+2. added unit tests, 
+3. rewritten API/Javadocs, 
+4. changes have been made based on discoveries and realizations made in the process of 2 & 3.
+
 ## Why?
 
 Java's **Clip** class (`javax.audio.sampled.Clip`) was not designed 
