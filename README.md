@@ -27,7 +27,8 @@ limited to only allowing changes at buffer increments.
 * ### Easy to Use
   * Very light: Download or copy/paste five class files from GitHub directly into your project.
   * Syntax is simpler than Java's `Clip` class.
-  * [API](http://adonax.com/AudioCue/api) and demonstration programs provided.
+  * [API](http://adonax.com/AudioCue/api) and demonstration programs provided. NOTE: this API link 
+now points to the most current [AudioCue-Maven](https://github.com/philfrei/AudioCue-maven) API.
 * ### Powerful
   * Runs directly on Java's `SourceDataLine`.
   * Supports playback of PCM (signed, stereo floats) and WAV (16-bit, 44100 fps, stereo, little-endian)
